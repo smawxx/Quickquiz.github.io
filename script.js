@@ -47,3 +47,19 @@ function getResult3() {
   };
   document.getElementById("result3").innerText = resultMap[result];
 }
+    function getResult4() {
+      const questions = ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10"];
+      let score = { yeon: 0, sooho: 0, jun: 0 };
+      questions.forEach(q => {
+        const value = document.querySelector(`input[name="${q}"]:checked`)?.value;
+        if (value) score[value]++;
+      });
+      let result = Object.entries(score).sort((a,b) => b[1] - a[1])[0][0];
+      const resultMap = {
+        yeon: "You're 'si eun' the smart, quiet kid who minds their own business unless some one disturbs you",
+        Sooho: "You're 'sooho' the chill guy, who doesn't really care about school and are the best friend ever.",
+        jun: "You're 'seo juntae' the cute pookie friend but always got your friends back ."
+      };
+      document.getElementById("result4").innerText = resultMap[result];
+    }
+
