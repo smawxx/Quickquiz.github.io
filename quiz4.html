@@ -1,92 +1,170 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Which Weak Hero Class 2 Character Are You?</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #fcd1ec, #e0bbf9);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #5e005e;
+      padding: 20px;
+      text-align: center;
+    }h1 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.question {
+  background-color: #fff0f6;
+  border: 2px dashed #ff99cc;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 15px;
+  width: 90%;
+  max-width: 600px;
+}
+
+button {
+  background-color: #ffaadd;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #7a007a;
+  background-color: #ffe6f7;
+  padding: 15px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>🧠 Which Weak Hero Class 2 Character Are You?</h1>
-    <form id="quiz4">
-      <div class="question">
-        <p>1. How do you handle bullies?</p>
-        <label><input type="radio" name="q1" value="Yeon"> Outsmart them 💡</label>
-        <label><input type="radio" name="q1" value="Sooho"> Fight back 💥</label>
-        <label><input type="radio" name="q1" value="jun"> Freeze 😨</label>
-      </div>
-      <div class="question">
-        <p>2. What's your role in a friend group?</p>
-        <label><input type="radio" name="q2" value="Yeon"> The quiet observer 👀</label>
-        <label><input type="radio" name="q2" value="Sooho"> The protector 🛡️</label>
-        <label><input type="radio" name="q2" value="jun"> The shy supporter 🌱</label>
-      </div>
-      <div class="question">
-        <p>3. Favorite aesthetic vibe?</p>
-        <label><input type="radio" name="q3" value="Yeon"> Grayscale 📸</label>
-        <label><input type="radio" name="q3" value="Sooho"> Fire & red tones 🔥</label>
-        <label><input type="radio" name="q3" value="jun"> Soft pastels 💗</label>
-      </div>
-      <div class="question">
-        <p>4. Pick a weapon:</p>
-        <label><input type="radio" name="q4" value="Yeon"> Brain 🧠</label>
-        <label><input type="radio" name="q4" value="Sooho"> Fists 👊</label>
-        <label><input type="radio" name="q4" value="jun"> None 😔</label>
-      </div>
-      <div class="question">
-        <p>5. What's your biggest strength?</p>
-        <label><input type="radio" name="q5" value="Yeon"> Intelligence 📚</label>
-        <label><input type="radio" name="q5" value="Sooho"> Loyalty ❤️</label>
-        <label><input type="radio" name="q5" value="jun"> Empathy 🕊️</label>
-      </div>
-      <div class="question">
-        <p>6. What’s your school vibe?</p>
-        <label><input type="radio" name="q6" value="Yeon"> Top of the class 📖</label>
-        <label><input type="radio" name="q6" value="Sooho"> Detention-prone 🤘</label>
-        <label><input type="radio" name="q6" value="jun"> Tries to disappear 🫣</label>
-      </div>
-      <div class="question">
-        <p>7. How do you express anger?</p>
-        <label><input type="radio" name="q7" value="Yeon"> Stay silent 😐</label>
-        <label><input type="radio" name="q7" value="Sooho"> Lash out 🔥</label>
-        <label><input type="radio" name="q7" value="jun"> Cry 😭</label>
-      </div>
-      <div class="question">
-        <p>8. Pick a hobby:</p>
-        <label><input type="radio" name="q8" value="Yeon"> Studying 📘</label>
-        <label><input type="radio" name="q8" value="Sooho">sleeping💤</label>
-        <label><input type="radio" name="q8" value="jun"> Drawing 🎨</label>
-      </div>
-      <div class="question">
-        <p>9. Who do you rely on the most?</p>
-        <label><input type="radio" name="q9" value="Yeon"> Myself 😎</label>
-        <label><input type="radio" name="q9" value="Sooho"> My bestie 🫂</label>
-        <label><input type="radio" name="q9" value="jun"> Anyone who listens 📞</label>
-      </div>
-      <div class="question">
-        <p>10. Your ideal day:</p>
-        <label><input type="radio" name="q10" value="Yeon"> Solving puzzles 🧩</label>
-        <label><input type="radio" name="q10" value="Sooho"> Protecting someone 💪</label>
-        <label><input type="radio" name="q10" value="jun"> Listening to music 🎧</label>
-      </div>
-      <button type="button" onclick="getResult(4)">Get Result</button>
-    </form>
-    <div id="result4" class="result"></div>
-  </div>
+  <h1>🌸 Which Weak Hero Class 2 Character Are You? 🌸</h1>
+  <form id="quizForm">
+    <div class="question">
+      <p>1. Your ideal weekend activity?</p>
+      <input type="radio" name="q1" value="sieun"> Reading alone quietly<br>
+      <input type="radio" name="q1" value="sunjae"> Playing games with friends<br>
+      <input type="radio" name="q1" value="hyuntak"> Working out<br>
+      <input type="radio" name="q1" value="baku"> Strategizing and planning<br>
+      <input type="radio" name="q1" value="seojun"> Hanging out confidently at school<br>
+    </div><div class="question">
+  <p>2. How do you handle conflict?</p>
+  <input type="radio" name="q2" value="sieun"> Keep quiet but smartly win<br>
+  <input type="radio" name="q2" value="sunjae"> Stay loyal to your team<br>
+  <input type="radio" name="q2" value="hyuntak"> Face it head-on<br>
+  <input type="radio" name="q2" value="baku"> Outsmart the opponent<br>
+  <input type="radio" name="q2" value="seojun"> Intimidate with presence<br>
+</div>
 
+<div class="question">
+  <p>3. Pick a color that matches your vibe:</p>
+  <input type="radio" name="q3" value="sieun"> Grey<br>
+  <input type="radio" name="q3" value="sunjae"> Blue<br>
+  <input type="radio" name="q3" value="hyuntak"> Red<br>
+  <input type="radio" name="q3" value="baku"> Black<br>
+  <input type="radio" name="q3" value="seojun"> Gold<br>
+</div>
 
-<a href="index.html">⬅️ Back to Home</a>
+<div class="question">
+  <p>4. Your strength lies in:</p>
+  <input type="radio" name="q4" value="sieun"> Intelligence<br>
+  <input type="radio" name="q4" value="sunjae"> Friendship<br>
+  <input type="radio" name="q4" value="hyuntak"> Physical power<br>
+  <input type="radio" name="q4" value="baku"> Manipulation<br>
+  <input type="radio" name="q4" value="seojun"> Leadership<br>
+</div>
 
-    <script src="Script.js"></script>
+<div class="question">
+  <p>5. What’s your vibe at school?</p>
+  <input type="radio" name="q5" value="sieun"> Quiet genius<br>
+  <input type="radio" name="q5" value="sunjae"> Reliable buddy<br>
+  <input type="radio" name="q5" value="hyuntak"> Tough guy<br>
+  <input type="radio" name="q5" value="baku"> Mysterious planner<br>
+  <input type="radio" name="q5" value="seojun"> Fearless leader<br>
+</div>
 
-</body>
-</html>
+<div class="question">
+  <p>6. What motivates you the most?</p>
+  <input type="radio" name="q6" value="sieun"> Solving complex problems<br>
+  <input type="radio" name="q6" value="sunjae"> Loyalty and friendship<br>
+  <input type="radio" name="q6" value="hyuntak"> Justice and fairness<br>
+  <input type="radio" name="q6" value="baku"> Gaining power<br>
+  <input type="radio" name="q6" value="seojun"> Dominating others<br>
+</div>
 
+<div class="question">
+  <p>7. Your communication style?</p>
+  <input type="radio" name="q7" value="sieun"> Minimal but impactful<br>
+  <input type="radio" name="q7" value="sunjae"> Honest and warm<br>
+  <input type="radio" name="q7" value="hyuntak"> Direct and strong<br>
+  <input type="radio" name="q7" value="baku"> Mysterious and cryptic<br>
+  <input type="radio" name="q7" value="seojun"> Assertive and loud<br>
+</div>
 
+<div class="question">
+  <p>8. Favorite school subject?</p>
+  <input type="radio" name="q8" value="sieun"> Math<br>
+  <input type="radio" name="q8" value="sunjae"> PE<br>
+  <input type="radio" name="q8" value="hyuntak"> Biology<br>
+  <input type="radio" name="q8" value="baku"> Literature<br>
+  <input type="radio" name="q8" value="seojun"> Business<br>
+</div>
 
+<div class="question">
+  <p>9. What's your biggest fear?</p>
+  <input type="radio" name="q9" value="sieun"> Being misunderstood<br>
+  <input type="radio" name="q9" value="sunjae"> Losing friends<br>
+  <input type="radio" name="q9" value="hyuntak"> Failing to protect<br>
+  <input type="radio" name="q9" value="baku"> Losing control<br>
+  <input type="radio" name="q9" value="seojun"> Showing weakness<br>
+</div>
 
+<div class="question">
+  <p>10. What do others admire in you?</p>
+  <input type="radio" name="q10" value="sieun"> Smart thinking<br>
+  <input type="radio" name="q10" value="sunjae"> Kindness<br>
+  <input type="radio" name="q10" value="hyuntak"> Strength<br>
+  <input type="radio" name="q10" value="baku"> Strategy<br>
+  <input type="radio" name="q10" value="seojun"> Confidence<br>
+</div>
 
+<button type="button" onclick="showResult()">Show Result</button>
 
-                 
+  </form>  <div id="result"></div>  <script>
+    function showResult() {
+      const answers = document.querySelectorAll('input[type="radio"]:checked');
+      let score = { sieun: 0, sunjae: 0, hyuntak: 0, baku: 0, seojun: 0 };
+
+      answers.forEach((answer) => {
+        score[answer.value] += 1;
+      });
+
+      let highest = Object.keys(score).reduce((a, b) => score[a] > score[b] ? a : b);
+
+      const resultsText = {
+        sieun: "You're Yeon Sieun: smart, introverted, and a quiet fighter!",
+        seojun: "You're Seo jun tae: loyal, caring, and always got your friend’s back!",
+        hyuntak: "You're Go Hyun Tak: strong, brave, and full of heart!",
+        baku: "You're Baku: clever, secretive, and always thinking 10 steps ahead!",
+        sunjae: "You're guem sun jae, the trouble maker, bad boy!"
+      };
+
+      document.getElementById("result").innerText = resultsText[highest];
+    }
+  </script></body>
+    </html>
