@@ -13,3 +13,31 @@ p#result1, p#result2, p#result3 { font-size: 1.2em; text-align: center; margin-t
 
 a { display: block; text-align: center; margin-top: 20px; text-decoration: none; color: #6a0dad; font-weight: bold; }
 
+/* Cute Navbar Style */
+.navbar {
+  background-color: #ffe6f0;
+  padding: 15px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 20px auto;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #b03060;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 30px;
+  background-color: #fff0f5;
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar a:hover {
+  background-color: #f8c8dc;
+  color: #fff;
+  box-shadow: 0 0 10px #ff99cc;
+  }
