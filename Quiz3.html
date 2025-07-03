@@ -1,0 +1,110 @@
+<!-- quiz3.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Drama Personality Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📺 Which K-Drama Describes You Best?</h1>
+  <form id="quizForm3">
+    <div>
+      <img src="https://i.imgur.com/yKs8qyy.jpg" class="question-image">
+      <p>1. Your ideal weekend?</p>
+      <input type="radio" name="q1" value="itaewon"> Exploring city streets 🏙️<br>
+      <input type="radio" name="q1" value="goblin"> Reading under cozy lights ✨<br>
+      <input type="radio" name="q1" value="crash"> Bingeing dramas with snacks 🍿<br>
+    </div><div>
+  <img src="https://i.imgur.com/Lw8I4Ux.jpg" class="question-image">
+  <p>2. Pick a quote:</p>
+  <input type="radio" name="q2" value="goblin"> "Every moment I spent with you shined."<br>
+  <input type="radio" name="q2" value="crash"> "Even in another life, I’d find you."<br>
+  <input type="radio" name="q2" value="itaewon"> "Live like you mean it."<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/pG6U2in.jpg" class="question-image">
+  <p>3. Choose your aesthetic:</p>
+  <input type="radio" name="q3" value="itaewon"> Urban chic 🖤<br>
+  <input type="radio" name="q3" value="goblin"> Soft fantasy ✨<br>
+  <input type="radio" name="q3" value="crash"> Wholesome vintage 📻<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/k09NR5p.jpg" class="question-image">
+  <p>4. What’s your biggest strength?</p>
+  <input type="radio" name="q4" value="itaewon"> Resilience 💪<br>
+  <input type="radio" name="q4" value="goblin"> Emotional depth 🌌<br>
+  <input type="radio" name="q4" value="crash"> Loyalty 💞<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/1xJkNJo.jpg" class="question-image">
+  <p>5. Dream travel destination?</p>
+  <input type="radio" name="q5" value="itaewon"> Seoul 🇰🇷<br>
+  <input type="radio" name="q5" value="goblin"> Quebec ❄️<br>
+  <input type="radio" name="q5" value="crash"> Swiss Alps 🏔️<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/6mYuBzO.jpg" class="question-image">
+  <p>6. Favorite romantic trope?</p>
+  <input type="radio" name="q6" value="itaewon"> Rivals to lovers 🔥<br>
+  <input type="radio" name="q6" value="goblin"> Eternal soulmates 💫<br>
+  <input type="radio" name="q6" value="crash"> Destined but apart 💔<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/ejQJe0P.jpg" class="question-image">
+  <p>7. What makes you cry?</p>
+  <input type="radio" name="q7" value="goblin"> Deep poetic moments 🥀<br>
+  <input type="radio" name="q7" value="crash"> Separation and longing 😭<br>
+  <input type="radio" name="q7" value="itaewon"> Personal growth struggles 🥲<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/ylA3bXK.jpg" class="question-image">
+  <p>8. Choose a side character you’d vibe with:</p>
+  <input type="radio" name="q8" value="itaewon"> Confident bestie 👯‍♀️<br>
+  <input type="radio" name="q8" value="goblin"> Wise grandma 👵<br>
+  <input type="radio" name="q8" value="crash"> Quirky soldier 💂<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/znMZmU6.jpg" class="question-image">
+  <p>9. Pick a K-drama scene:</p>
+  <input type="radio" name="q9" value="goblin"> Snowy kiss ❄️💋<br>
+  <input type="radio" name="q9" value="crash"> Airport goodbye ✈️💔<br>
+  <input type="radio" name="q9" value="itaewon"> Restaurant success party 🎉<br>
+</div>
+
+<div>
+  <img src="https://i.imgur.com/9cavcGb.jpg" class="question-image">
+  <p>10. Which word speaks to you most?</p>
+  <input type="radio" name="q10" value="itaewon"> Independent 💼<br>
+  <input type="radio" name="q10" value="goblin"> Soulful 🕊️<br>
+  <input type="radio" name="q10" value="crash"> Devoted 💘<br>
+</div>
+
+<button type="button" onclick="getResult3()">Show My Drama!</button>
+
+  </form>
+  <p id="result3"></p>
+  <a href="index.html">⬅️ Back to Home</a>  <script>
+    function getResult3() {
+      const questions = ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10"];
+      let score = { itaewon: 0, goblin: 0, crash: 0 };
+      questions.forEach(q => {
+        const value = document.querySelector(`input[name="${q}"]:checked`)?.value;
+        if (value) score[value]++;
+      });
+      let result = Object.entries(score).sort((a,b) => b[1] - a[1])[0][0];
+      const resultMap = {
+        itaewon: "You're 'Itaewon Class' 💼 Fierce, ambitious, and driven by your values.",
+        goblin: "You're 'Goblin' ✨ Romantic, deep, and timelessly poetic.",
+        crash: "You're 'Crash Landing on You' 💘 Loyal, emotional, and drawn to fate."
+      };
+      document.getElementById("result3").innerText = resultMap[result];
+    }
+  </script></body>
+</html>
